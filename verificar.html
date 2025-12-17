@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Verificação</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Documento Verificado ✔</h1>
+
+    <p><b>ID:</b> {{ doc.id }}</p>
+    <p><b>Nome:</b> {{ doc.nome }}</p>
+    <p><b>Data:</b> {{ doc.data }}</p>
+
+    <a href="/download/{{ doc.id }}">📥 Download</a>
+</div>
+</body>
+</html>

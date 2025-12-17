@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+{% if registro %}
+    <h2 style="color:green">Documento VÁLIDO</h2>
+    <p><b>ID:</b> {{ trace_id }}</p>
+    <p><b>Arquivo:</b> {{ registro.arquivo }}</p>
+    <p><b>Data:</b> {{ registro.data }}</p>
+
+    <img src="/{{ registro.qr }}" width="180"><br><br>
+
+    <a href="/download/{{ trace_id }}" class="botao-principal">Download PDF</a>
+{% else %}
+    <h2 style="color:red">Documento NÃO encontrado</h2>
+{% endif %}
+</div>
+</body>
+</html>
